@@ -5,7 +5,7 @@ import grails.plugin.springsecurity.annotation.Secured
 
 import static org.springframework.http.HttpStatus.*
 import grails.transaction.Transactional
-
+@Secured(['ROLE_USER','ROLE_ADMIN'])
 class UserController {
 
     static allowedMethods = [index:"GET", search:"GET", save: "POST", update: "PUT", delete: "DELETE"]
